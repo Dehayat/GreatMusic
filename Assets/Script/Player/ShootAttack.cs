@@ -11,7 +11,11 @@ public class ShootAttack : PlayerAttack
     public override void DoAttack()
     {
         base.Attack();
-        GameObject projectile = Instantiate(throwPrefab, throwPoint.position, Quaternion.identity);
+
+        float angle = Vector3.SignedAngle(Vector3.right, aimDirection, Vector3.forward);
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        GameObject projectile = Instantiate(throwPrefab, throwPoint.position, rotation);
+
         projectile.GetComponent<Bullet>().SetVelocity(bulletSpeed * aimDirection);
     }
 }
