@@ -542,6 +542,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3278809882289380211, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
   m_PrefabInstance: {fileID: 3278809881428949581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400561985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3278809882289380108, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+  m_PrefabInstance: {fileID: 3278809881428949581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4fe6801d16cbe48a22c1727bbe6806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1903541622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -702,6 +713,46 @@ PrefabInstance:
     - target: {fileID: 3278809882289380211, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
+      value: 8f8457db-7561-4056-92e5-265c61c3dd59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
+      value: Player/DropDown[/Keyboard/s]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1400561985}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DropDownInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Rosa.PlayerInput, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278809882289380215, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3278809882289380218, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
       propertyPath: m_Name

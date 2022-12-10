@@ -27,8 +27,10 @@ namespace Rosa
             {
                 mc_attack.GetCurrentAttack().Attack();
             }
+            mc_controller.SetDropDown(m_dropDownInput);
             m_shootInput = false;
             m_jumpInput = false;
+            m_dropDownInput = false;
         }
 
 

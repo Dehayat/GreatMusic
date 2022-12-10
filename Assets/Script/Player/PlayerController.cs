@@ -252,9 +252,40 @@ namespace Rosa
             }
         }
 
+        private ContactPoint2D[] platformContactResult = new ContactPoint2D[4];
         public void SetDropDown(bool dropDownInput)
         {
-
+            Collider2D dropCollider = null;
+            if (dropDownInput)
+            {
+                ContactFilter2D contactFilter = new ContactFilter2D();
+                contactFilter.NoFilter();
+                contactFilter.useNormalAngle = true;
+                contactFilter.minNormalAngle = 85;
+                contactFilter.maxNormalAngle = 95;
+                int result = mc_rb.GetContacts(contactFilter, platformContactResult);
+                for (int i = 0; i < result; i++)
+                {
+                    var effector = platformContactResult[i].collider.GetComponent<PlatformEffector2D>();
+                    if (effector != null)
+                    {
+                        dropCollider = platformContactResult[i].collider;
+                    }
+                }
+            }
+            if (dropCollider != null)
+            {
+                dropCollider.enabled = false;
+                StartCoroutine(EnablePlatformDelay(dropCollider));
+            }
+        }
+        IEnumerator EnablePlatformDelay(Collider2D collider)
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (collider != null)
+            {
+                collider.enabled = true;
+            }
         }
     }
 }
