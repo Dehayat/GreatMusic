@@ -40,6 +40,7 @@ namespace BehaviorTree
         private void _Attach(Node node)
         {
             node.parent = this;
+            children.Add(node);
         }
 
         public void SetData(String key, object value)
@@ -47,6 +48,16 @@ namespace BehaviorTree
             _dataContext[key] = value;
         }
 
+        public void SetDataRoot(String key, object value)
+        {
+            Node node = parent;
+            while (node.parent != null)
+            {
+                node = node.parent;
+            }
+            node.SetData(key, value);
+        }
+        
         public object GetData(String key)
         {
             object value = null;

@@ -13,9 +13,10 @@ namespace BehaviorTree
         {
             bool anyChildIsRunning = false;
             NodeState state;
-
+            
             foreach (Node node in children)
             {
+                //Debug.Log("Here");
                 switch (node.Evaluate())
                 {
                     case NodeState.FAILURE:

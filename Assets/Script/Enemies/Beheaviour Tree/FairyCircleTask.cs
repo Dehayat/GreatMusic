@@ -21,21 +21,11 @@ public class FairyCircleTask : Node
 
     public FairyCircleTask(Transform fairy)
     {
-        _transform = fairy;
-        target = _transform.position;
+
     }
     
     public override NodeState Evaluate()
     {
-        positionOffset.Set(
-            Mathf.Cos( angle ) * CircleRadius,
-            Mathf.Sin( angle ) * CircleRadius,
-            0
-            
-        );
-        _transform.position = target + positionOffset;
-        angle += Time.deltaTime * rotationSpeed;
-        
         
         var state = NodeState.RUNNING;
         return state;

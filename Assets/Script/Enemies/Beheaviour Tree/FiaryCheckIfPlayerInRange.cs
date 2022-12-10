@@ -7,15 +7,27 @@ using BehaviorTree;
 
 public class FiaryCheckIfPlayerInRange : Node
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private GameObject _player;
+    private Transform _fairyPosition;
+
+    private int distanceToCheck;
+    
+    public FiaryCheckIfPlayerInRange(GameObject player, Transform fairyPosition, int distanceToCheck)
     {
-        
+        _player = player;
+        _fairyPosition = fairyPosition;
+        this.distanceToCheck = distanceToCheck;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override NodeState Evaluate()
     {
+        float distanceToPlayer = Vector3.Distance(_player.transform.position, _fairyPosition.position);
         
+        if (distanceToPlayer < distanceToCheck)
+        {
+            return NodeState.SUCCESS;
+        }
+        return NodeState.FAILURE;
     }
 }
