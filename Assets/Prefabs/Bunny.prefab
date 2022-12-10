@@ -175,7 +175,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629dea50067f0ef4a8036cbd39665918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 11
+  health: 140
 --- !u!114 &5698383377342155530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1ad7ef870e82840ab8e86fd962984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropToothType: 1
 --- !u!114 &5251955073941078547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,9 +268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e055593dae0274c8688b072e4abe0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceForActiveMode: 5
-  DistanceToJump: 5
-  angle: 45
+  DistanceForActiveMode: 3
+  DistanceToJump: 10
+  angle: 65
   distanceWhenToRetreat: 0.9
   RetreatAngle: 45
 --- !u!1 &5903616977027764965
