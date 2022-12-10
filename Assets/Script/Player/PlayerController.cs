@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 namespace Rosa
 {
@@ -36,6 +37,8 @@ namespace Rosa
         private float m_jumpSpeed = 10f;
         [SerializeField]
         private LayerMask m_groundLayer;
+
+        public StudioEventEmitter hitSound;
 
 
         private void Awake()
@@ -80,6 +83,7 @@ namespace Rosa
         private void OnHit(HitInfo hitInfo)
         {
             //Do particles of something
+            hitSound.Play();
             mc_health.Damage(hitInfo.attackData.data.damage);
         }
 
