@@ -7,17 +7,19 @@ namespace Rosa
     {
         private PlayerController mc_controller;
         private AttackChooser mc_attack;
+        private PlayerInteract mc_interact;
 
         private bool m_listenForInput = true;
         private int m_moveInput = 0;
         private bool m_jumpInput = false;
         private Vector2 m_aimInput = Vector2.zero;
         private bool m_shootInput = false;
-        private bool m_pickupInput = false;
+        private bool m_interactInput = false;
         private void Awake()
         {
             mc_controller = GetComponent<PlayerController>();
             mc_attack = GetComponent<AttackChooser>();
+            mc_interact = GetComponent<PlayerInteract>();
         }
         private void Update()
         {
@@ -27,10 +29,15 @@ namespace Rosa
             {
                 mc_attack.GetCurrentAttack().Attack();
             }
+            if (m_interactInput)
+            {
+                mc_interact.InteractWithCurrent();
+            }
             mc_controller.SetDropDown(m_dropDownInput);
             m_shootInput = false;
             m_jumpInput = false;
             m_dropDownInput = false;
+            m_interactInput = false;
         }
 
 
@@ -114,20 +121,20 @@ namespace Rosa
                 m_dropDownInput = false;
             }
         }
-        public void PickupInput(CallbackContext callbackContext)
+        public void InteractInput(CallbackContext callbackContext)
         {
             if (!m_listenForInput)
             {
-                m_pickupInput = false;
+                m_interactInput = false;
                 return;
             }
             if (callbackContext.performed)
             {
-                m_pickupInput = true;
+                m_interactInput = true;
             }
             else if (callbackContext.canceled)
             {
-                m_pickupInput = true;
+                m_interactInput = true;
             }
         }
 
