@@ -1969,18 +1969,18 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.3
-      inSlope: 0.0006666666
-      outSlope: 0.0006666666
+      value: 0.4
+      inSlope: 0.00066666666
+      outSlope: 0.00066666666
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 600
-      value: 0.7
-      inSlope: 0.0006666666
-      outSlope: 0.0006666666
+      value: 0.8
+      inSlope: 0.00066666666
+      outSlope: 0.00066666666
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334

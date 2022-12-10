@@ -272,8 +272,8 @@ Transform:
   m_GameObject: {fileID: 2067146685707948430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4936496140777918746}
   - {fileID: 5288356389163049410}
@@ -440,10 +440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e055593dae0274c8688b072e4abe0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceForActiveMode: 3
+  DistanceForActiveMode: 0
+  activeAngle: 30
   DistanceToJump: 10
-  angle: 65
-  distanceWhenToRetreat: 0.9
+  angle: 70
+  distanceWhenToRetreat: 0.1
   RetreatAngle: 45
 --- !u!95 &162995812
 Animator:

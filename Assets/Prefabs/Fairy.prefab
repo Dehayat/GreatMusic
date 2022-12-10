@@ -335,6 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1ad7ef870e82840ab8e86fd962984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropToothType: 0
+  DeathTimer: 0
 --- !u!114 &5151505418796833165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,8 +381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  movementTime: 0.3
-  waitTime: 2
+  movementTime: 0.2
+  waitTime: 1.5
 --- !u!114 &5151505418796833159
 MonoBehaviour:
   m_ObjectHideFlags: 0
