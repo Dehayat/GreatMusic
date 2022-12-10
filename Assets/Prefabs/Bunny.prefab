@@ -81,12 +81,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3662232791620436763}
   - component: {fileID: 4718578092568673785}
-  - component: {fileID: 4924981870239693716}
   - component: {fileID: 1173906747273328153}
   - component: {fileID: 8068049526481074459}
   - component: {fileID: 3703535307231236605}
   - component: {fileID: 1742663677936016475}
   - component: {fileID: 5698383377342155530}
+  - component: {fileID: 5251955073941078547}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -163,23 +163,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4924981870239693716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067146685707948430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0e055593dae0274c8688b072e4abe0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DistanceForActiveMode: 5
-  DistanceToJump: 0
-  angle: 0
-  distanceWhenToRetreat: 0
-  RetreatAngle: 0
 --- !u!50 &1173906747273328153
 Rigidbody2D:
   serializedVersion: 4
@@ -200,7 +183,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8068049526481074459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,6 +255,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1ad7ef870e82840ab8e86fd962984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5251955073941078547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067146685707948430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e055593dae0274c8688b072e4abe0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceForActiveMode: 5
+  DistanceToJump: 5
+  angle: 45
+  distanceWhenToRetreat: 0.9
+  RetreatAngle: 45
 --- !u!1 &5903616977027764965
 GameObject:
   m_ObjectHideFlags: 0

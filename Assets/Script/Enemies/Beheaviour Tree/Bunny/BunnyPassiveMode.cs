@@ -9,7 +9,7 @@ public class BunnyPassiveMode : Node
 
     [Header("JumpVariables")] 
     [SerializeField] private float distanceToJump;
-    [SerializeField] private float angle;
+    [SerializeField] private float angle = 45f;
     
     private GameObject _bunny;
     private GameObject _player;

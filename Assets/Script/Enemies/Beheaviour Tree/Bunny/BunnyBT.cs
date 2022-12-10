@@ -7,16 +7,16 @@ using Tree = BehaviorTree.Tree;
 
 public class BunnyBT : Tree
 {
-    [Header("Active Mode")] [SerializeField] private int DistanceForActiveMode;
+    [Header("Active Mode")] [SerializeField] private int DistanceForActiveMode = 5;
 
     [Header("Passive Mode")] [SerializeField]
-    private float DistanceToJump;
+    private float DistanceToJump = 5f;
     [SerializeField]
-    private float angle;
+    private float angle = 45f;
 
-    [Header("Retreat")] [SerializeField] private float distanceWhenToRetreat;
+    [Header("Retreat")] [SerializeField] private float distanceWhenToRetreat = 0.9f;
     [SerializeField]
-    private float RetreatAngle;
+    private float RetreatAngle = 45f;
     
     private GameObject _player;
     
