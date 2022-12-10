@@ -8,6 +8,7 @@ using Tree = BehaviorTree.Tree;
 public class BunnyBT : Tree
 {
     [Header("Active Mode")] [SerializeField] private int DistanceForActiveMode = 5;
+    [SerializeField] private float activeAngle = 45f;
 
     [Header("Passive Mode")] [SerializeField]
     private float DistanceToJump = 5f;
@@ -32,7 +33,7 @@ public class BunnyBT : Tree
         Debug.Log("Here" + transform.position);
         Node root = new Selector(new List<Node>
         {
-            new CheckIfMoving(gameObject.GetComponent<Rigidbody2D>()),
+            new CheckIfMoving(gameObject.GetComponent<Rigidbody2D>(), gameObject.GetComponent<Collider2D>(), gameObject.transform),
             new Sequence(new List<Node>
             {
                 new CheckIfPlayerInRange(_player, transform, distanceWhenToRetreat),
@@ -41,7 +42,7 @@ public class BunnyBT : Tree
             new Sequence(new List<Node>
             {
                 new CheckIfPlayerInRange(_player, transform, DistanceForActiveMode),
-                new BunnyActiveMode(_player, gameObject, angle)
+                new BunnyActiveMode(_player, gameObject, activeAngle)
             }),
             new BunnyPassiveMode(DistanceToJump, angle, gameObject, _player),
         });

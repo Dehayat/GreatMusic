@@ -511,10 +511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653eb2c4aeeddb54da9a5c36fbaa4e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_runSpeed: 10
+  m_runSpeed: 12
   mc_anim: {fileID: 3278809882289380213}
   m_jumpSteps: 15
-  m_jumpSpeed: 10
+  m_jumpSpeed: 20
   m_groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -597,10 +597,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwOrigin: {fileID: 715417907}
   throwPoint: {fileID: 214301408}
-  throwCooldown: 0.5
+  throwCooldown: 0.8
   aimTime: 0.2
   throwPrefab: {fileID: 3047385334097927416, guid: 9cb347df5c6458a4b9cfe28eef5d5ec0, type: 3}
-  throwForce: 10
+  throwForce: 25
 --- !u!114 &3278809882289380110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwOrigin: {fileID: 715417907}
   throwPoint: {fileID: 214301408}
-  throwCooldown: 0.5
+  throwCooldown: 0.25
   aimTime: 0.2
   throwPrefab: {fileID: 3047385334097927416, guid: eee64ffafc3e37944a0f6606d329cd1f, type: 3}
   bulletSpeed: 30
