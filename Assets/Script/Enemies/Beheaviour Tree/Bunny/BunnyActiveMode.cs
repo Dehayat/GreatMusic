@@ -8,6 +8,7 @@ public class BunnyActiveMode : Node
 
     private GameObject _player;
     private GameObject _bunny;
+    private Rigidbody2D _bunnyBody;
     
     //TODO: maybe we can calculate this later
     private float angle = 15f;
@@ -33,14 +34,13 @@ public class BunnyActiveMode : Node
         _player = player;
         _bunny = bunny;
         this.angle = angle;
+        _bunnyBody = _bunny.GetComponent<Rigidbody2D>();
     }
 
     public override NodeState Evaluate()
     {
-        Debug.Log(("Active"));
-        Rigidbody2D bunnyBody = _bunny.GetComponent<Rigidbody2D>();
         var velocity = calcBallisticVelocityVector(_bunny.transform.position,_player.transform.position, angle);
-        bunnyBody.AddForce(new Vector2(velocity.x, velocity.y) * bunnyBody.mass, ForceMode2D.Impulse);
+        _bunnyBody.AddForce(new Vector2(velocity.x, velocity.y) * _bunnyBody.mass, ForceMode2D.Impulse);
         return NodeState.SUCCESS;
     }
 }
