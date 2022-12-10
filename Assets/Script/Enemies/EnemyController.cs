@@ -42,6 +42,7 @@ public class EnemyController : MonoBehaviour
             EventSystem.GetInstance().EmitEvent("ScoreEvent", new ScoreAddEvent(10f));
             Dead = true;
             DeathCoolDown = Time.time + DeathTimer;
+            GetComponent<Animator>().SetBool("Death", true);
         }
     }
     
