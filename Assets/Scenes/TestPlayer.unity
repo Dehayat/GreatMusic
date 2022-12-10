@@ -1196,6 +1196,7 @@ MonoBehaviour:
   score: 0
   currentWeapon: 0
   isInLevel: 0
+  teeth: 0
   scoreMultiplierCurve:
     serializedVersion: 2
     m_Curve:

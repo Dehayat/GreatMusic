@@ -26,6 +26,7 @@ public class GameData : MonoBehaviour
     public int score = 0;
     public int currentWeapon = 0;
     public bool isInLevel = false;
+    public int teeth = 0;
 
     public AnimationCurve scoreMultiplierCurve;
 
