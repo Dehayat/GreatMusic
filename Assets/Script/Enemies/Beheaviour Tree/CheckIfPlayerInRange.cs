@@ -5,24 +5,24 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class FiaryCheckIfPlayerInRange : Node
+public class CheckIfPlayerInRange : Node
 {
 
     private GameObject _player;
-    private Transform _fairyPosition;
+    private Transform _myPosition;
 
     private int distanceToCheck;
     
-    public FiaryCheckIfPlayerInRange(GameObject player, Transform fairyPosition, int distanceToCheck)
+    public CheckIfPlayerInRange(GameObject player, Transform myPosition, int distanceToCheck)
     {
         _player = player;
-        _fairyPosition = fairyPosition;
+        _myPosition = myPosition;
         this.distanceToCheck = distanceToCheck;
     }
 
     public override NodeState Evaluate()
     {
-        float distanceToPlayer = Vector3.Distance(_player.transform.position, _fairyPosition.position);
+        float distanceToPlayer = Vector3.Distance(_player.transform.position, _myPosition.position);
         
         if (distanceToPlayer < distanceToCheck)
         {
