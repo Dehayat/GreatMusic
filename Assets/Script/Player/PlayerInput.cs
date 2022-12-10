@@ -6,24 +6,32 @@ namespace Rosa
     public class PlayerInput : MonoBehaviour
     {
         private PlayerController mc_controller;
+        private PlayerAttack mc_attack;
 
         private bool m_listenForInput = true;
         private int m_moveInput = 0;
         private bool m_jumpInput = false;
         private Vector2 m_aimInput = Vector2.zero;
-        private bool m_hookInput = false;
-        private bool m_attackInput = false;
+        private bool m_shootInput = false;
         private bool m_pickupInput = false;
         private void Awake()
         {
             mc_controller = GetComponent<PlayerController>();
+            mc_attack = GetComponent<PlayerAttack>();
         }
         private void Update()
         {
             mc_controller.SetMoveDir(m_moveInput);
             mc_controller.SetJump(m_jumpInput);
-            mc_controller.SetAttack(m_attackInput);
+            mc_attack.SetAimDirection(m_aimInput);
+            if (m_shootInput)
+            {
+                mc_attack.Attack();
+            }
+            m_shootInput = false;
+            m_jumpInput = false;
         }
+
 
         public void MoveInput(CallbackContext callbackContext)
         {
@@ -76,16 +84,16 @@ namespace Rosa
         {
             if (!m_listenForInput)
             {
-                m_hookInput = false;
+                m_shootInput = false;
                 return;
             }
             if (callbackContext.performed)
             {
-                m_hookInput = true;
+                m_shootInput = true;
             }
             if (callbackContext.canceled)
             {
-                m_hookInput = false;
+                m_shootInput = false;
             }
         }
         public void PickupInput(CallbackContext callbackContext)

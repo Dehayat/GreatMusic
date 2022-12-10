@@ -7,13 +7,6 @@ namespace Rosa
 {
     public class PlayerController : MonoBehaviour
     {
-        private enum CombatState
-        {
-            Idle,
-            Attacking,
-            GetHit,
-            Dead
-        }
         private enum MoveState
         {
             Idle,
@@ -27,13 +20,11 @@ namespace Rosa
         private Health mc_health;
         private float m_moveDir = 0f;
         private int m_facingDir = 1;
-        private CombatState m_combatState;
         private MoveState m_moveState;
         private int m_currentJumpSteps;
 
         private float m_savedGravity;
         private bool m_isGrounded;
-        private float m_stopStunTime;
 
         [SerializeField]
         private float m_runSpeed = 10f;
@@ -64,29 +55,8 @@ namespace Rosa
 
         private void OnHit(HitInfo hitInfo)
         {
-            if (m_moveState == MoveState.Run)
-            {
-                StopRunning();
-            }
-            if (m_moveState == MoveState.Jump)
-            {
-                StopJumping();
-            }
-            if (m_moveState == MoveState.Fall)
-            {
-                StopFalling();
-            }
-            if (m_moveState == MoveState.Run)
-            {
-                StopRunning();
-            }
-            if (m_combatState == CombatState.Attacking)
-            {
-                StopAttacking();
-            }
-            StartGetHit();
+            //Do particles of something
             mc_health.Damage(hitInfo.attackData.data.damage);
-            m_stopStunTime = Time.time + hitInfo.attackData.data.stunDuration;
         }
 
         private void FixedUpdate()
@@ -105,18 +75,6 @@ namespace Rosa
                     break;
                 case MoveState.Fall:
                     FallState();
-                    break;
-                default:
-                    break;
-            }
-            switch (m_combatState)
-            {
-                case CombatState.Idle:
-                    break;
-                case CombatState.Attacking:
-                    break;
-                case CombatState.GetHit:
-                    GetHitUpdate();
                     break;
                 default:
                     break;
@@ -174,14 +132,6 @@ namespace Rosa
             mc_rb.velocity = vel;
         }
 
-        private void GetHitUpdate()
-        {
-            if (Time.time > m_stopStunTime)
-            {
-                StopGetHit();
-            }
-        }
-
         private void StartRunning()
         {
             m_moveState = MoveState.Run;
@@ -220,34 +170,6 @@ namespace Rosa
             mc_rb.velocity = velocity;
         }
 
-        private void StartAttacking()
-        {
-            m_combatState = CombatState.Attacking;
-            mc_anim.SetTrigger("Attack");
-            StartCoroutine(AttackTimer());
-        }
-        IEnumerator AttackTimer()
-        {
-            yield return new WaitForSeconds(0.5f);
-            if (m_combatState == CombatState.Attacking)
-            {
-                StopAttacking();
-            }
-        }
-        private void StopAttacking()
-        {
-            m_combatState = CombatState.Idle;
-        }
-        private void StartGetHit()
-        {
-            m_combatState = CombatState.GetHit;
-            mc_anim.SetBool("Hit", true);
-        }
-        private void StopGetHit()
-        {
-            mc_anim.SetBool("Hit", false);
-            m_combatState = CombatState.Idle;
-        }
 
         private void FaceLeft()
         {
@@ -293,8 +215,7 @@ namespace Rosa
 
         public void SetMoveDir(int moveDir)
         {
-            if (m_combatState == CombatState.Idle
-                && (m_moveState == MoveState.Idle || m_moveState == MoveState.Run || m_moveState == MoveState.Fall))
+            if ((m_moveState == MoveState.Idle || m_moveState == MoveState.Run || m_moveState == MoveState.Fall))
             {
                 if (moveDir != 0 && m_moveState == MoveState.Idle)
                 {
@@ -314,19 +235,10 @@ namespace Rosa
                     FaceLeft();
                 }
             }
-            else if (m_combatState == CombatState.Attacking)
-            {
-                if (moveDir != m_moveDir)
-                {
-                    m_moveDir = 0;
-                    StopRunning();
-                }
-            }
         }
         public void SetJump(bool jumpInput)
         {
-            if (m_combatState == CombatState.Idle
-                && (m_moveState == MoveState.Idle || m_moveState == MoveState.Run))
+            if ((m_moveState == MoveState.Idle || m_moveState == MoveState.Run))
             {
                 if (jumpInput)
                 {
@@ -338,20 +250,6 @@ namespace Rosa
                 }
             }
         }
-        public void SetAttack(bool attackInput)
-        {
-            if (m_combatState == CombatState.Idle)
-            {
-                if (attackInput)
-                {
-                    StartAttacking();
-                }
-            }
-        }
 
-        public bool IsDead()
-        {
-            return m_combatState == CombatState.Dead;
-        }
     }
 }
