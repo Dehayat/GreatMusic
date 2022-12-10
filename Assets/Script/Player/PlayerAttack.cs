@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,45 @@ public class PlayerAttack : MonoBehaviour
 
     private float lastAttack = 0;
     Quaternion savedRotation;
+
+    protected bool useDmg = false;
+    protected float damageMultiplier;
+    public void SetAttackDamage(float dmg)
+    {
+        useDmg = true;
+        damageMultiplier = dmg;
+    }
+    public void ResetAttackDamage()
+    {
+        useDmg = false;
+    }
+
+    private void OnEnable()
+    {
+        EventSystem.GetInstance().ListenToEvent("UpgradeAttackDamage", UpgradeGunDamage);
+    }
+    private void OnDisable()
+    {
+        EventSystem.GetInstance().IgnoreEvent("UpgradeAttackDamage", UpgradeGunDamage);
+    }
+    private Coroutine DamageUpgradeCo;
+    private void UpgradeGunDamage(EventData obj)
+    {
+        FloatEventData eventData = obj as FloatEventData;
+        if (DamageUpgradeCo != null)
+        {
+            ResetAttackDamage();
+            StopCoroutine(DamageUpgradeCo);
+        }
+        DamageUpgradeCo = StartCoroutine(SetDamageForDuration(eventData.value1, eventData.value2));
+    }
+    IEnumerator SetDamageForDuration(float damageMulti, float duration)
+    {
+        SetAttackDamage(damageMulti);
+        yield return new WaitForSeconds(duration);
+        ResetAttackDamage();
+    }
+
 
     public void Attack()
     {
@@ -34,7 +74,6 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(aimTime);
         throwOrigin.transform.rotation = savedRotation;
     }
-
     public virtual void SetAimDirection(Vector2 dir)
     {
         var aimInput = dir;

@@ -48,11 +48,34 @@ namespace Rosa
         private void OnEnable()
         {
             mc_combat.HitEvent += OnHit;
+            EventSystem.GetInstance().ListenToEvent("UpgradeMoveSpeed", UpgradeMoveSpeedEvent);
         }
         private void OnDisable()
         {
             mc_combat.HitEvent -= OnHit;
+            EventSystem.GetInstance().IgnoreEvent("UpgradeMoveSpeed", UpgradeMoveSpeedEvent);
         }
+
+        private Coroutine speedUpgradeCo;
+        private void UpgradeMoveSpeedEvent(EventData obj)
+        {
+            FloatEventData eventData = obj as FloatEventData;
+            if (speedUpgradeCo != null)
+            {
+                m_runSpeed = savedRunSpeed;
+                StopCoroutine(speedUpgradeCo);
+            }
+            speedUpgradeCo = StartCoroutine(SetMoveSpeedForDuration(eventData.value1, eventData.value2));
+        }
+        private float savedRunSpeed;
+        IEnumerator SetMoveSpeedForDuration(float speed, float duration)
+        {
+            savedRunSpeed = m_runSpeed;
+            m_runSpeed = speed;
+            yield return new WaitForSeconds(duration);
+            m_runSpeed = savedRunSpeed;
+        }
+
 
         private void OnHit(HitInfo hitInfo)
         {
