@@ -17,7 +17,6 @@ public class PlayerInteract : MonoBehaviour
     {
         var intercatData = obj as InteractableEvent;
         currentInteractable = intercatData.interactable;
-        Debug.Log(currentInteractable);
     }
 
     private void CantInteract(EventData obj)
@@ -27,7 +26,6 @@ public class PlayerInteract : MonoBehaviour
         {
             currentInteractable = null;
         }
-        Debug.Log(currentInteractable);
     }
 
     private void OnDisable()
