@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Rosa;
@@ -27,9 +28,14 @@ public class FiaryExplosion : MonoBehaviour
 
     private void OnHit(HitInfo info)
     {
-        if (info.attacker.GetOwner() == target)
+        GetComponent<Health>().Damage(info.attackData.data.damage);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.rigidbody.gameObject == target)
         {
-            //Explode()
+            Destroy(gameObject);
         }
     }
 }

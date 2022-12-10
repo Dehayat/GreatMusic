@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 5151505418796833161}
   - component: {fileID: 5151505418796833158}
   - component: {fileID: 5151505418796833159}
-  m_Layer: 9
+  - component: {fileID: 5849345956576198307}
+  - component: {fileID: 7485321854522521382}
+  - component: {fileID: 61383962379409071}
+  m_Layer: 0
   m_Name: Fairy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,6 +157,48 @@ MonoBehaviour:
   mc_hitBoxes:
   - {fileID: 5151505418851265185}
   mc_hurtBoxes: []
+--- !u!114 &5849345956576198307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151505418796833164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629dea50067f0ef4a8036cbd39665918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!58 &7485321854522521382
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151505418796833164}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &61383962379409071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151505418796833164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f3774375f892246937f5baa09df133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToBeDealt: 0
 --- !u!1 &5151505418851265189
 GameObject:
   m_ObjectHideFlags: 0
