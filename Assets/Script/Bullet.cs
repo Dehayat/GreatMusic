@@ -5,8 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public float lifeTime = 3f;
-
     private Rigidbody2D rb;
 
     private Vector2 velocity;
@@ -15,24 +13,14 @@ public class Bullet : MonoBehaviour
     {
         velocity = vel;
     }
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-    private void Start()
-    {
-        StartCoroutine(DieAfter(lifeTime));
-    }
-
-    IEnumerator DieAfter(float t)
-    {
-        yield return new WaitForSeconds(t);
-        Die();
-    }
-    private void Die()
-    {
-        Destroy(gameObject);
     }
     private void FixedUpdate()
     {

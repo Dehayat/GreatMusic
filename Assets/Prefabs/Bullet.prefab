@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3047385333202695632}
   - component: {fileID: 3047385333202695638}
   - component: {fileID: 3047385333202695633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,9 @@ GameObject:
   - component: {fileID: 3047385334097927418}
   - component: {fileID: 8871947349370669779}
   - component: {fileID: 276840161804919581}
-  m_Layer: 0
+  - component: {fileID: -8080450206095479758}
+  - component: {fileID: 3763982113179971468}
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,3 +220,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e56ac68ea57ae42a8bef4ed5449301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8080450206095479758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047385334097927416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61aa8ebb7057c1c4093c475703077d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 3
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276840161804919581}
+        m_TargetAssemblyTypeName: Bullet, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3763982113179971468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047385334097927416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0b1e7e78f312b42a848d13eac11f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_attackData:
+    data:
+      damage: 5
+      stunDuration: 0
+  mc_hitBoxes:
+  - {fileID: 3047385333202695638}
+  mc_hurtBoxes: []

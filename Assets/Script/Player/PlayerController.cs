@@ -37,6 +37,7 @@ namespace Rosa
         [SerializeField]
         private LayerMask m_groundLayer;
 
+
         private void Awake()
         {
             mc_rb = GetComponent<Rigidbody2D>();
@@ -251,5 +252,9 @@ namespace Rosa
             }
         }
 
+        public void SetDropDown(bool dropDownInput)
+        {
+
+        }
     }
 }

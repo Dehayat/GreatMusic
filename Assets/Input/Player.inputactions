@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "Press",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DropDown",
+                    "type": "Button",
+                    "id": "8f8457db-7561-4056-92e5-265c61c3dd59",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -201,6 +210,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "379ffac3-f2a1-46de-b2ba-f031e978d4f6",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DropDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

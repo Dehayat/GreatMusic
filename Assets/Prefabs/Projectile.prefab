@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3047385333202695632}
   - component: {fileID: 3047385333202695638}
   - component: {fileID: 3047385333202695633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,9 @@ GameObject:
   - component: {fileID: 3047385334097927397}
   - component: {fileID: 3047385334097927418}
   - component: {fileID: 8871947349370669779}
-  m_Layer: 0
+  - component: {fileID: -3930854389138739106}
+  - component: {fileID: 3993428927508958149}
+  m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,3 +207,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3930854389138739106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047385334097927416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61aa8ebb7057c1c4093c475703077d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0.5
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3993428927508958149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047385334097927416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0b1e7e78f312b42a848d13eac11f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_attackData:
+    data:
+      damage: 10
+      stunDuration: 0
+  mc_hitBoxes:
+  - {fileID: 3047385333202695638}
+  mc_hurtBoxes: []
