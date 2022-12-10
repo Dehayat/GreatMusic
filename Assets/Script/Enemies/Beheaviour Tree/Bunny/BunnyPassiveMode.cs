@@ -41,15 +41,12 @@ public class BunnyPassiveMode : Node
 
     public override NodeState Evaluate()
     {
-        if (bunnyBody.velocity == Vector2.zero)
-        {
-            var direction = (_player.transform.position - _bunny.transform.position).normalized;
-            Debug.Log(direction);
-            Vector3 newposition = new Vector3(_bunny.transform.position.x + (direction.x * distanceToJump), _bunny.transform.position.y,
-                _bunny.transform.position.z);
-            var velocity = calcBallisticVelocityVector(_bunny.transform.position, newposition, angle);
-            bunnyBody.AddForce(new Vector2(velocity.x, velocity.y) * bunnyBody.mass, ForceMode2D.Impulse);
-        }
+
+        var direction = (_player.transform.position - _bunny.transform.position).normalized;
+        Vector3 newposition = new Vector3(_bunny.transform.position.x + (direction.x * distanceToJump), _bunny.transform.position.y,
+            _bunny.transform.position.z);
+        var velocity = calcBallisticVelocityVector(_bunny.transform.position, newposition, angle);
+        bunnyBody.AddForce(new Vector2(velocity.x, velocity.y) * bunnyBody.mass, ForceMode2D.Impulse);
 
         var state = NodeState.RUNNING;
         return state;

@@ -11,6 +11,11 @@ public class TimeEvent : EventData
 public class ScoreAddEvent : EventData
 {
     public float baseScore;
+
+    public ScoreAddEvent(float baseScore)
+    {
+        this.baseScore = baseScore;
+    }
 }
 
 public class GameData : MonoBehaviour
@@ -31,6 +36,7 @@ public class GameData : MonoBehaviour
 
     private void AddScore(EventData obj)
     {
+        Debug.Log("eventSystem");
         ScoreAddEvent eventData = obj as ScoreAddEvent;
         score += (int)(eventData.baseScore * (int)currentScoreMultiplier);
     }

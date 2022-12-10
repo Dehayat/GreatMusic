@@ -39,11 +39,8 @@ public class BunnyActiveMode : Node
     {
         Debug.Log(("Active"));
         Rigidbody2D bunnyBody = _bunny.GetComponent<Rigidbody2D>();
-        if (bunnyBody.velocity == Vector2.zero)
-        {
-            var velocity = calcBallisticVelocityVector(_bunny.transform.position,_player.transform.position, angle);
-            bunnyBody.AddForce(new Vector2(velocity.x, velocity.y) * bunnyBody.mass, ForceMode2D.Impulse); 
-        }
+        var velocity = calcBallisticVelocityVector(_bunny.transform.position,_player.transform.position, angle);
+        bunnyBody.AddForce(new Vector2(velocity.x, velocity.y) * bunnyBody.mass, ForceMode2D.Impulse);
         return NodeState.SUCCESS;
     }
 }
