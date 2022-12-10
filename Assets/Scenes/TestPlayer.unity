@@ -1060,6 +1060,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4fe6801d16cbe48a22c1727bbe6806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1400561988 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1400561988, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+  m_PrefabInstance: {fileID: 3278809881428949581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400561975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34aea44f3a671d54cbb2c0d04b6334eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1400561990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,6 +1288,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1400561988, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: throwPoint
+      value: 
+      objectReference: {fileID: 214301408}
+    - target: {fileID: 1400561988, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: throwOrigin
+      value: 
+      objectReference: {fileID: 715417907}
+    - target: {fileID: 1400561989, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: usedAttack
+      value: 
+      objectReference: {fileID: 1400561988}
+    - target: {fileID: 3278809882289380111, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: throwPoint
+      value: 
+      objectReference: {fileID: 214301408}
+    - target: {fileID: 3278809882289380111, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
+      propertyPath: throwOrigin
+      value: 
+      objectReference: {fileID: 715417907}
     - target: {fileID: 3278809882289380208, guid: 4577b2483bba9bc44ab5c0632c5c707f, type: 3}
       propertyPath: m_Sprite
       value: 
