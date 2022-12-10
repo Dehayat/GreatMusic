@@ -36,7 +36,6 @@ public class GameData : MonoBehaviour
 
     private void AddScore(EventData obj)
     {
-        Debug.Log("eventSystem");
         ScoreAddEvent eventData = obj as ScoreAddEvent;
         score += (int)(eventData.baseScore * (int)currentScoreMultiplier);
     }
