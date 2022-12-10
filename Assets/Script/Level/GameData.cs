@@ -11,6 +11,11 @@ public class TimeEvent : EventData
 public class ScoreAddEvent : EventData
 {
     public float baseScore;
+
+    public ScoreAddEvent(float baseScore)
+    {
+        this.baseScore = baseScore;
+    }
 }
 
 public class GameData : MonoBehaviour

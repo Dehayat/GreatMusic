@@ -22,7 +22,6 @@ public class FairyBT : BehaviorTree.Tree
 
     protected override Node SetupTree()
     {
-        Debug.Log("Here" + transform.position);
         Node root = new Selector(new List<Node>
         {
             new Sequence(new List<Node>

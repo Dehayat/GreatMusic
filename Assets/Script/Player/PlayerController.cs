@@ -171,6 +171,7 @@ namespace Rosa
             m_currentJumpSteps = 0;
             m_moveState = MoveState.Jump;
             mc_anim.SetBool("Jumping", true);
+            EventSystem.GetInstance().EmitEvent("PlayerJump", null);
         }
         private void StopJumping()
         {
