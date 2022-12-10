@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using Rosa;
 using UnityEngine;
 
+
+
 public class EnemyController : MonoBehaviour
 {
 
     private Health enemy_health;
     private Combat enemy_combat;
+    [SerializeField] private ToothType dropToothType;
+
     
     // Start is called before the first frame update
     void Start()
@@ -24,10 +28,11 @@ public class EnemyController : MonoBehaviour
     }
 
     public void onHit(HitInfo info)
-    {
+    {   
         enemy_health.Damage(info.attackData.data.damage);
         if (enemy_health.GetHealth() <= 0)
         {
+            EventSystem.GetInstance().EmitEvent("DropTeeth", new TeethEvent(gameObject.transform.position, dropToothType));
             EventSystem.GetInstance().EmitEvent("ScoreEvent", new ScoreAddEvent(10f));
             Destroy(gameObject);
         }

@@ -32,7 +32,7 @@ public class BunnyBT : Tree
         Debug.Log("Here" + transform.position);
         Node root = new Selector(new List<Node>
         {
-            new CheckIfMoving(gameObject.GetComponent<Rigidbody2D>()),
+            new CheckIfMoving(gameObject.GetComponent<Rigidbody2D>(), gameObject.GetComponent<Collider2D>(), gameObject.transform),
             new Sequence(new List<Node>
             {
                 new CheckIfPlayerInRange(_player, transform, distanceWhenToRetreat),
