@@ -25,11 +25,9 @@ public class EnemyController : MonoBehaviour
 
     public void onHit(HitInfo info)
     {
-        Debug.Log("Here");
         enemy_health.Damage(info.attackData.data.damage);
         if (enemy_health.GetHealth() <= 0)
         {
-            Debug.Log("EnemyController");
             EventSystem.GetInstance().EmitEvent("ScoreEvent", new ScoreAddEvent(10f));
             Destroy(gameObject);
         }
