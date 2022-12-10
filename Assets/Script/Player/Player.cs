@@ -6,6 +6,6 @@ public class Player : MonoBehaviour
 {
     public Vector3 GetPosition()
     {
-        return Vector3.zero;
+        return transform.position;
     }
 }
