@@ -4,7 +4,7 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class BunnyPassiveMode : Node
+public class BunnyRetreat : Node
 {
 
     [Header("JumpVariables")] 
@@ -30,7 +30,7 @@ public class BunnyPassiveMode : Node
         return velocity * direction.normalized;    
     }
 
-    public BunnyPassiveMode(float distanceToJump, float angle, GameObject bunny, GameObject player)
+    public BunnyRetreat(float distanceToJump, float angle, GameObject bunny, GameObject player)
     {
         this.distanceToJump = distanceToJump;
         this.angle = angle;
@@ -44,8 +44,7 @@ public class BunnyPassiveMode : Node
         if (bunnyBody.velocity == Vector2.zero)
         {
             var direction = (_player.transform.position - _bunny.transform.position).normalized;
-            Debug.Log(direction);
-            Vector3 newposition = new Vector3(_bunny.transform.position.x + (direction.x * distanceToJump), _bunny.transform.position.y,
+            Vector3 newposition = new Vector3(_bunny.transform.position.x + (-direction.x * distanceToJump), _bunny.transform.position.y,
                 _bunny.transform.position.z);
             var velocity = calcBallisticVelocityVector(_bunny.transform.position, newposition, angle);
             bunnyBody.AddForce(new Vector2(velocity.x, velocity.y) * bunnyBody.mass, ForceMode2D.Impulse);

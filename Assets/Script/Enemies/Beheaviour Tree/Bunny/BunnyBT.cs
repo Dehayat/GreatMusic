@@ -13,6 +13,10 @@ public class BunnyBT : Tree
     private float DistanceToJump;
     [SerializeField]
     private float angle;
+
+    [Header("Retreat")] [SerializeField] private float distanceWhenToRetreat;
+    [SerializeField]
+    private float RetreatAngle;
     
     private GameObject _player;
     
@@ -30,10 +34,15 @@ public class BunnyBT : Tree
         {
             new Sequence(new List<Node>
             {
+                new CheckIfPlayerInRange(_player, transform, distanceWhenToRetreat),
+                new BunnyRetreat(5, RetreatAngle, gameObject, _player)
+            }),
+            new Sequence(new List<Node>
+            {
                 new CheckIfPlayerInRange(_player, transform, DistanceForActiveMode),
                 new BunnyActiveMode(_player, gameObject, angle)
             }),
-            new BunnyPassiveMode(DistanceToJump, angle, gameObject),
+            new BunnyPassiveMode(DistanceToJump, angle, gameObject, _player),
         });
         root.SetData("PassivePositionTarget", transform.position);
         return root;
