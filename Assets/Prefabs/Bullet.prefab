@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_attackData:
     data:
-      damage: 5
+      damage: 20
       stunDuration: 0
   mc_hitBoxes:
   - {fileID: 3047385333202695638}

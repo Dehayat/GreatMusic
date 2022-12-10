@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2366204614725877786}
   - component: {fileID: 2366204614725877787}
   m_Layer: 0
-  m_Name: Pickup_Speed20_5
+  m_Name: Pickup_Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.20886964, g: 0.8490566, b: 0.17942323, a: 1}
+  m_Color: {r: 0.34117648, g: 0.0627451, b: 0.081781946, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,13 +132,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2366204614725877787}
         m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
-        m_MethodName: SetMoveSpeed
+        m_MethodName: SetAttackDamage
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 15
+          m_FloatArgument: 40
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

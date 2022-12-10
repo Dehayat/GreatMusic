@@ -363,8 +363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transform: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
-  rotationSpeed: 1
-  CircleRadius: 1
+  rotationSpeed: 1.5
+  CircleRadius: 2
   ElevationOffset: 0
 --- !u!114 &5151505418796833158
 MonoBehaviour:
@@ -378,9 +378,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f715f6d87202f040af96f66989268a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  movementTime: 1
-  waitTime: 5
+  speed: 3
+  movementTime: 0.3
+  waitTime: 2
 --- !u!114 &5151505418796833159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_attackData:
     data:
-      damage: 90
+      damage: 30
       stunDuration: 0
   mc_hitBoxes:
   - {fileID: 5151505418851265185}
