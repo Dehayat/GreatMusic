@@ -424,7 +424,6 @@ GameObject:
   - component: {fileID: 1400561984}
   - component: {fileID: 1400561983}
   - component: {fileID: 1400561985}
-  - component: {fileID: 1400561987}
   - component: {fileID: 1400561986}
   m_Layer: 0
   m_Name: Player
@@ -741,21 +740,6 @@ MonoBehaviour:
   throwPrefab: {fileID: 3047385334097927416, guid: 9cb347df5c6458a4b9cfe28eef5d5ec0, type: 3}
   throwPoint: {fileID: 1924518199}
   throwForce: 10
---- !u!114 &1400561987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400561975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34aea44f3a671d54cbb2c0d04b6334eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwPrefab: {fileID: 3047385334097927416, guid: eee64ffafc3e37944a0f6606d329cd1f, type: 3}
-  throwPoint: {fileID: 1924518199}
-  bulletSpeed: 30
 --- !u!1 &1644909481
 GameObject:
   m_ObjectHideFlags: 0
