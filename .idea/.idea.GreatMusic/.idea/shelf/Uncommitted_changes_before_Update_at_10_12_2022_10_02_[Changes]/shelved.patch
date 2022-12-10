@@ -1,0 +1,15 @@
+Index: Assets/Scripts.meta
+===================================================================
+diff --git a/Assets/Scripts.meta b/Assets/Scripts.meta
+deleted file mode 100644
+--- a/Assets/Scripts.meta	(revision af7c85bf87b866c09281a03f33855816fb9bd06c)
++++ /dev/null	(revision af7c85bf87b866c09281a03f33855816fb9bd06c)
+@@ -1,8 +0,0 @@
+-fileFormatVersion: 2
+-guid: f5aadce8320db014087c911988c9b193
+-folderAsset: yes
+-DefaultImporter:
+-  externalObjects: {}
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
