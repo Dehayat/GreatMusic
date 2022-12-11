@@ -62,11 +62,14 @@ public class ElfShoot : Node
         projectile.GetComponent<DieAfter>().lifeTime = _lifeTimeBullet;
 
     }
-    
+
     public override NodeState Evaluate()
     {
-        SetDataRoot("Awake", true);
-        if ((bool) GetData("isShootCooldown")) return NodeState.FAILURE;
+        if ((bool)GetData("Awake") == false){
+            SetDataRoot("Awake", true);
+            _elf.GetComponent<Animator>().SetBool("Awake", true);
+        }
+    if ((bool) GetData("isShootCooldown")) return NodeState.FAILURE;
         if ((int)GetData("shootingCounter") >= _maxShooting)
         {
             parent.SetData("TeleportReady", true);
