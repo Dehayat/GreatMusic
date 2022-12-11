@@ -9,22 +9,26 @@ public class BGM : MonoBehaviour
     public GameData data;
 
     public float secondPhaseStart = 40;
-    public float thirdPhaseStart = 120;
     public StudioEventEmitter bgm;
 
     private void Update()
     {
-        if (data.levelTime < secondPhaseStart)
+        if (data.isInLevel)
         {
-            bgm.SetParameter("Zone", 1);
-        }
-        else if (data.levelTime < thirdPhaseStart)
-        {
-            bgm.SetParameter("Zone", 2);
+            bgm.EventInstance.setParameterByName("Zone", 1);
         }
         else
         {
-            bgm.SetParameter("Zone", 3);
+            bgm.EventInstance.setParameterByName("Zone", 0);
+        }
+
+        if (data.levelTime < secondPhaseStart)
+        {
+            bgm.EventInstance.setParameterByName("Phase", 1);
+        }
+        else
+        {
+            bgm.EventInstance.setParameterByName("Phase", 3);
         }
     }
 }

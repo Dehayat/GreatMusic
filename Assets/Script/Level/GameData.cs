@@ -49,10 +49,6 @@ public class GameData : MonoBehaviour
     }
 
 
-    private void Start()
-    {
-        EnterLevel();
-    }
 
     private void Update()
     {
