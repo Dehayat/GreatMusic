@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3047385333202695632}
   - component: {fileID: 3047385333202695638}
   - component: {fileID: 3047385333202695633}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 3763982113179971468}
   - component: {fileID: 967836639}
   m_Layer: 10
-  m_Name: Bullet
+  m_Name: Bullet Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61aa8ebb7057c1c4093c475703077d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 0.25
+  lifeTime: 1
   destroyEvent:
     m_PersistentCalls:
       m_Calls:
