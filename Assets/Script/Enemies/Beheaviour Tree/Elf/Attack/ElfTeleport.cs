@@ -48,6 +48,7 @@ public class ElfTeleport : Node
         var direction = (_elfPos.position - _playerPos.position).normalized;
         var position = new Vector3(_elfPos.position.x + direction.x * _xDistanceTeleport,
             _elfPos.position.y + direction.y * _yDistanceTeleport, _elfPos.position.z);
+        if(position.x < _limitLeft || position.x > _limitRight || position.y < _limitDown || position.y > _limitUp) return;
         _elfPos.position = position;
     }
 
