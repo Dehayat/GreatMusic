@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 5698383377342155530}
   - component: {fileID: 5251955073941078547}
   - component: {fileID: 162995812}
+  - component: {fileID: 443265304}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -272,8 +273,8 @@ Transform:
   m_GameObject: {fileID: 2067146685707948430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4936496140777918746}
   - {fileID: 5288356389163049410}
@@ -440,10 +441,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e055593dae0274c8688b072e4abe0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceForActiveMode: 3
+  DistanceForActiveMode: 0
+  activeAngle: 30
   DistanceToJump: 10
-  angle: 65
-  distanceWhenToRetreat: 0.9
+  angle: 70
+  distanceWhenToRetreat: 0.1
   RetreatAngle: 45
 --- !u!95 &162995812
 Animator:
@@ -465,6 +467,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &443265304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067146685707948430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67c109dea67b9a44a2b6b284adf08bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 1188612651}
+  _transform: {fileID: 3662232791620436763}
+  frameFuxk: 15
 --- !u!1 &5903616977027764965
 GameObject:
   m_ObjectHideFlags: 0
