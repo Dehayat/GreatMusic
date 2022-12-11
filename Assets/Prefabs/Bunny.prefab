@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 5251955073941078547}
   - component: {fileID: 162995812}
   - component: {fileID: 443265304}
+  - component: {fileID: 6488620899403359540}
   m_Layer: 0
   m_Name: Bunny
   m_TagString: Untagged
@@ -485,6 +486,19 @@ MonoBehaviour:
   _renderer: {fileID: 1188612651}
   _transform: {fileID: 3662232791620436763}
   frameFuxk: 15
+--- !u!114 &6488620899403359540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067146685707948430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bab31961914ec249b716a7a429863b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameUpdate: 3
 --- !u!1 &5903616977027764965
 GameObject:
   m_ObjectHideFlags: 0
