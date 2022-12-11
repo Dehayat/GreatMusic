@@ -15,12 +15,14 @@ public class FiaryActiveBeahiouv : MonoBehaviour
     private float nextWait = 0f;
     private float waitTimer = 0f;
     private bool waiting = false;
+    [SerializeField] private EnemyController fairyController;
     
     private Transform target;
 
     private void Awake()
     {
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        fairyController = GetComponent<EnemyController>();
     }
 
     // Start is called before the first frame update
@@ -41,14 +43,14 @@ public class FiaryActiveBeahiouv : MonoBehaviour
     private void FixedUpdate()
     {
         //Debug.Log("CurrentTime:" + Time.time + "NextWait" + nextWait);
-        if (waiting)
+        if (waiting && fairyController.Dead == false)
         {
             if (Time.time > waitTimer) waiting = false;
             nextWait = Time.time + waitTime;
             return;
         }
 
-        if (Time.time < nextWait)
+        if (Time.time < nextWait && fairyController.Dead == false)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             waitTimer = Time.time + movementTime;

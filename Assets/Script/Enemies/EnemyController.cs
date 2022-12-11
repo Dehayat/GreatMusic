@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Rosa;
 using UnityEngine;
-
+using Tree = BehaviorTree.Tree;
 
 
 public class EnemyController : MonoBehaviour
@@ -13,7 +13,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private ToothType dropToothType;
     [SerializeField] private float DeathTimer;
     private float DeathCoolDown;
-    private bool Dead = false;
+    public bool Dead = false;
+    [SerializeField] private Tree beheaviourTree;
     
     
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class EnemyController : MonoBehaviour
         enemy_health = GetComponent<Health>();
         enemy_combat = GetComponent<Combat>();
         enemy_combat.HitEvent += onHit;
+        beheaviourTree = GetComponent<Tree>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class EnemyController : MonoBehaviour
             EventSystem.GetInstance().EmitEvent("ScoreEvent", new ScoreAddEvent(10f));
             Dead = true;
             DeathCoolDown = Time.time + DeathTimer;
+            beheaviourTree.enabled = false;
             GetComponent<Animator>().SetBool("Death", true);
         }
     }

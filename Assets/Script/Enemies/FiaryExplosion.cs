@@ -9,6 +9,7 @@ public class FiaryExplosion : MonoBehaviour
     private Combat _combat;
     private GameObject target;
     [SerializeField] private float ExplosionTimer;
+    [SerializeField] private EnemyController Fairycontroller;
 
     private float ExpCoolDown;
     private bool Exploded = false;
@@ -17,6 +18,7 @@ public class FiaryExplosion : MonoBehaviour
     void Start()
     {
         target = GameObject.FindWithTag("Player");
+        Fairycontroller = GetComponent<EnemyController>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class FiaryExplosion : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.rigidbody.gameObject == target)
+        if (col.rigidbody.gameObject == target && Fairycontroller.Dead == false)
         {
             Exploded = true;
             ExpCoolDown = Time.time + ExplosionTimer;
