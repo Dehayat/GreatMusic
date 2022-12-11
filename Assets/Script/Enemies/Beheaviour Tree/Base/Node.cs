@@ -34,9 +34,12 @@ namespace BehaviorTree
             foreach (var child in children)
             {
                 _Attach(child);
+                child.initialize();
             }
         }
 
+        public virtual void initialize(){}
+        
         private void _Attach(Node node)
         {
             node.parent = this;
