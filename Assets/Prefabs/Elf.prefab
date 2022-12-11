@@ -325,13 +325,13 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3047385334097927416, guid: 278ac8db3b7bddd4db0e5f165a845938, type: 3}
   bulletSpeed: 10
   lifeTimeBullet: 3
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.8
   xDistanceTeleport: 2
-  yDistanceTeleport: 2
-  limitDown: 0
-  limitLeft: 0
-  limitRight: 0
-  limitUp: 0
+  yDistanceTeleport: -5
+  limitDown: -8
+  limitLeft: -20
+  limitRight: 35
+  limitUp: 20
 --- !u!61 &996691790277952643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1ad7ef870e82840ab8e86fd962984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropToothType: 0
+  dropToothType: 2
   DeathTimer: 1
 --- !u!95 &1426045956
 Animator:
