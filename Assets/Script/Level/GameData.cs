@@ -30,6 +30,8 @@ public class GameData : MonoBehaviour
 
     public AnimationCurve scoreMultiplierCurve;
 
+
+    
     private void OnEnable()
     {
         EventSystem.GetInstance().ListenToEvent("ScoreEvent", AddScore);
@@ -66,6 +68,7 @@ public class GameData : MonoBehaviour
                 freshLevelTime = this.freshLevelTime
             });
         }
+
     }
     public void EnterLevel()
     {
