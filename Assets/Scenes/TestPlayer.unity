@@ -1354,6 +1354,7 @@ GameObject:
   - component: {fileID: 1935286476}
   - component: {fileID: 1935286475}
   - component: {fileID: 1935286477}
+  - component: {fileID: 1935286478}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -1433,6 +1434,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doThing: 0
   duration: 5
+--- !u!114 &1935286478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935286474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69702502ed7bf945b1d2c1c4f68d52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallTeeth: {fileID: 4148825971531554111, guid: d92fa7c2c4463d5459a454b570a3d5c1, type: 3}
+  BigTeeth: {fileID: 4148825971531554111, guid: d92fa7c2c4463d5459a454b570a3d5c1, type: 3}
+  HugeTeeth: {fileID: 4148825971531554111, guid: d92fa7c2c4463d5459a454b570a3d5c1, type: 3}
 --- !u!1001 &2366204613558155725
 PrefabInstance:
   m_ObjectHideFlags: 0
