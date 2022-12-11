@@ -30,7 +30,6 @@ public class BunnyBT : Tree
     // Update is called once per frame
     protected override Node SetupTree()
     {
-        Debug.Log("Here" + transform.position);
         Node root = new Selector(new List<Node>
         {
             new CheckIfMoving(gameObject.GetComponent<Rigidbody2D>(), gameObject.GetComponent<Collider2D>(), gameObject.transform),
