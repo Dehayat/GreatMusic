@@ -50,7 +50,7 @@ MonoBehaviour:
   dampTimeY: 0.2
   maxSpeedX: 15
   maxSpeedY: 10
-  targetOffset: {x: 0, y: 0}
+  targetOffset: {x: 0, y: 1}
   returnFromOffsetTimeX: 0.1
   returnFromOffsetTimeY: 0.1
   cam: {fileID: 6787165272612141031}
@@ -64,8 +64,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6787165272612141030}
   - component: {fileID: 6787165272612141031}
-  - component: {fileID: 6787165272612141028}
   - component: {fileID: 6570807632686944422}
+  - component: {fileID: -3761101188001981804}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -131,14 +131,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6787165272612141028
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6787165272612141029}
-  m_Enabled: 1
 --- !u!114 &6570807632686944422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +164,16 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &-3761101188001981804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6787165272612141029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}

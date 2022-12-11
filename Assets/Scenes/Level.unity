@@ -1426,6 +1426,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
+--- !u!1 &153009539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153009541}
+  - component: {fileID: 153009540}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &153009540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153009539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 771288939
+      Data2: 1123982208
+      Data3: -1059469676
+      Data4: -580956914
+    Path: event:/BGM/BGM
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Phase
+    Value: 0
+  - Name: Zone
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &153009541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153009539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7194468, y: -1.4582301, z: 2.2380793}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &154615891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
@@ -101140,10 +101206,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1738503981}
-    - target: {fileID: 1447390971707305157, guid: 8faa64625e35dee4a954ac5aa8fe2e13, type: 3}
-      propertyPath: targetOffset.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1910264677107587485, guid: 8faa64625e35dee4a954ac5aa8fe2e13, type: 3}
       propertyPath: m_Name
       value: CameraController

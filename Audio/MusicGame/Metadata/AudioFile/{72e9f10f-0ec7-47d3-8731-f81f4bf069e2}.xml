@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{72e9f10f-0ec7-47d3-8731-f81f4bf069e2}">
+		<property name="assetPath">
+			<value>SFX/411460__inspectorj__power-up-bright-a.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.00390022675737</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ef3c467e-493a-4a8f-9927-883f241f35ae}</destination>
+		</relationship>
+	</object>
+</objects>

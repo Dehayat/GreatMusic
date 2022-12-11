@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5affac28-4b57-48b5-85fe-0c3c77c1dbb7}">
+		<property name="assetPath">
+			<value>Music/BattleOst3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>11.228072562358276</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ef3c467e-493a-4a8f-9927-883f241f35ae}</destination>
+		</relationship>
+	</object>
+</objects>

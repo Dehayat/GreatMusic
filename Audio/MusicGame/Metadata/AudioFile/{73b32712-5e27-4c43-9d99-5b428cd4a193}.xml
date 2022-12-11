@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{73b32712-5e27-4c43-9d99-5b428cd4a193}">
+		<property name="assetPath">
+			<value>SFX/256960__quaker540__supernatural-explosion.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.5750000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ef3c467e-493a-4a8f-9927-883f241f35ae}</destination>
+		</relationship>
+	</object>
+</objects>
