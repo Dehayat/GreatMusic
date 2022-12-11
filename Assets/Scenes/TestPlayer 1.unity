@@ -1086,6 +1086,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1235263299, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 689404818383282885, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2078,6 +2082,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 606361882}
+  teleportEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7468966917449991530
 PrefabInstance:
   m_ObjectHideFlags: 0
