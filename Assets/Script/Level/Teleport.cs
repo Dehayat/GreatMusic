@@ -14,7 +14,7 @@ public class Teleport : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").transform.position = destination.position;
             EventSystem.GetInstance().EmitEvent("TeleportPlayer", null);
+            teleportEvent?.Invoke();
         }
-        teleportEvent?.Invoke();
     }
 }
