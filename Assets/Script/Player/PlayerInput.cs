@@ -25,6 +25,7 @@ namespace Rosa
         {
             mc_controller.SetMoveDir(m_moveInput);
             mc_controller.SetJump(m_jumpInput);
+            mc_controller.HoldJump(holdJump);
             if (m_shootInput)
             {
                 mc_attack.GetCurrentAttack().Attack();
@@ -62,6 +63,7 @@ namespace Rosa
                 m_moveInput = 0;
             }
         }
+        private bool holdJump = false;
         public void JumpInput(CallbackContext callbackContext)
         {
             if (!m_listenForInput)
@@ -72,10 +74,12 @@ namespace Rosa
             if (callbackContext.performed)
             {
                 m_jumpInput = true;
+                holdJump = true;
             }
             if (callbackContext.canceled)
             {
                 m_jumpInput = false;
+                holdJump = false;
             }
         }
         public void AimInput(CallbackContext callbackContext)

@@ -36,6 +36,10 @@ namespace Rosa
         [SerializeField]
         private float m_jumpSpeed = 10f;
         [SerializeField]
+        private float m_minjumpSteps = 6f;
+        [SerializeField]
+        private int m_jumpForgiveFrames = 10;
+        [SerializeField]
         private LayerMask m_groundLayer;
 
         public StudioEventEmitter hitSound;
@@ -89,6 +93,10 @@ namespace Rosa
 
         private void FixedUpdate()
         {
+            if (currentForgiveFrames > 0)
+            {
+                currentForgiveFrames--;
+            }
             CheckGrounded();
             switch (m_moveState)
             {
@@ -170,8 +178,10 @@ namespace Rosa
             m_moveState = MoveState.Idle;
             mc_anim.SetBool("Running", false);
         }
+        private bool jumped = false;
         private void StartJumping()
         {
+            jumped = true;
             m_currentJumpSteps = 0;
             m_moveState = MoveState.Jump;
             mc_anim.SetBool("Jumping", true);
@@ -185,8 +195,15 @@ namespace Rosa
             velocity.y = 0f;
             mc_rb.velocity = velocity;
         }
+        private int currentForgiveFrames = 0;
         private void StartFalling()
         {
+            if (!jumped)
+            {
+                currentForgiveFrames = m_jumpForgiveFrames;
+            }
+            jumped = false;
+
             m_moveState = MoveState.Fall;
             mc_anim.SetBool("Falling", true);
         }
@@ -267,7 +284,8 @@ namespace Rosa
         }
         public void SetJump(bool jumpInput)
         {
-            if ((m_moveState == MoveState.Idle || m_moveState == MoveState.Run))
+
+            if ((m_moveState == MoveState.Idle || m_moveState == MoveState.Run) || (m_moveState == MoveState.Fall && currentForgiveFrames > 0))
             {
                 if (jumpInput)
                 {
@@ -275,7 +293,22 @@ namespace Rosa
                     {
                         StopRunning();
                     }
+                    if (m_moveState == MoveState.Fall)
+                    {
+                        StopFalling();
+                    }
                     StartJumping();
+                }
+            }
+        }
+        public void HoldJump(bool hold)
+        {
+            if (m_moveState == MoveState.Jump)
+            {
+                if (!hold && m_currentJumpSteps > m_minjumpSteps)
+                {
+                    StopJumping();
+                    StartFalling();
                 }
             }
         }
