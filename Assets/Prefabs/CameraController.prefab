@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7207460739565885682}
   - component: {fileID: 1447390971707305157}
+  - component: {fileID: 31058883332193239}
   m_Layer: 0
   m_Name: CameraController
   m_TagString: Untagged
@@ -54,6 +55,18 @@ MonoBehaviour:
   returnFromOffsetTimeX: 0.1
   returnFromOffsetTimeY: 0.1
   cam: {fileID: 6787165272612141031}
+--- !u!114 &31058883332193239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910264677107587485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff4d666393e7fb49b0ecae23d74b3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6787165272612141029
 GameObject:
   m_ObjectHideFlags: 0
