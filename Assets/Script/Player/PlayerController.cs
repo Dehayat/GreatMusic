@@ -89,6 +89,10 @@ namespace Rosa
             //Do particles of something
             hitSound.Play();
             mc_health.Damage(hitInfo.attackData.data.damage);
+            if (mc_health.GetHealth() <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void FixedUpdate()
