@@ -20,6 +20,11 @@ namespace Rosa
             }
         }
 
+        public void setHeath(float health)
+        {
+            this.health = health;
+        }
+        
         public float GetMaxHealth()
         {
             return maxHealth;

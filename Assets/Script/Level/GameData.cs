@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Rosa;
 using UnityEngine;
 
 public class TimeEvent : EventData
@@ -30,6 +31,7 @@ public class GameData : MonoBehaviour
 
     public AnimationCurve scoreMultiplierCurve;
 
+    public GameObject _playerHealth;
 
     
     private void OnEnable()
@@ -75,5 +77,6 @@ public class GameData : MonoBehaviour
     public void ExitLevel()
     {
         isInLevel = false;
+        _playerHealth.GetComponent<Health>().setHeath(_playerHealth.GetComponent<Health>().GetMaxHealth());
     }
 }
