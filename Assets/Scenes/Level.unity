@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &148504705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6150246883186623776, guid: 792646800ad766546931eba0801c00aa, type: 3}
@@ -4534,6 +4534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 500809278}
   - component: {fileID: 500809277}
+  - component: {fileID: 500809279}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -4599,6 +4600,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &500809279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500809276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69702502ed7bf945b1d2c1c4f68d52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallTeeth: {fileID: 4148825971531554111, guid: d92fa7c2c4463d5459a454b570a3d5c1, type: 3}
+  BigTeeth: {fileID: 4322446879914405635, guid: f7feeb009e2277b4583fa38541a85dc7, type: 3}
+  HugeTeeth: {fileID: 5475731943368066702, guid: 509b550436b393747b914b860e284c1b, type: 3}
 --- !u!1001 &506272598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4842,7 +4858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!1001 &524700532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5077,7 +5093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &536674031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
@@ -6172,7 +6188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &636629031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
@@ -89469,7 +89485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &905033479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
@@ -90918,7 +90934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &1049691451 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
@@ -95625,7 +95641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &1605674363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
@@ -96562,7 +96578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!1001 &1652873136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97070,7 +97086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &1683907706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
@@ -100158,7 +100174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 10
   spawnProbability: 0.7
-  prefab: {fileID: 0}
+  prefab: {fileID: 8495558536176900450, guid: 9dc1c6cf8c7fc59489e84c78e29b08ad, type: 3}
 --- !u!4 &2033801491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4056932425810242649, guid: a7789ba457f4805498fd2ee0516e4daa, type: 3}
