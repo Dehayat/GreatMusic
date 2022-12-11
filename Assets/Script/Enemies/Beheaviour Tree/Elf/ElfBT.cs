@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,8 @@ public class ElfBT : Tree
     
     private GameObject _player;
     
+    
+    
     public void Awake()
     {
         _player = GameObject.FindWithTag("Player");
@@ -57,4 +60,6 @@ public class ElfBT : Tree
         root.SetData("PassivePositionTarget", transform.position);
         return root;
     }
+    
 }
+
