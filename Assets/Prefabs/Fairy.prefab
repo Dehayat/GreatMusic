@@ -436,6 +436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropToothType: 0
   DeathTimer: 1
+  Dead: 0
+  beheaviourTree: {fileID: 0}
 --- !u!114 &5151505418796833165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +484,7 @@ MonoBehaviour:
   speed: 3
   movementTime: 0.2
   waitTime: 1.5
+  fairyController: {fileID: 0}
 --- !u!114 &5151505418796833159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_attackData:
     data:
-      damage: 30
+      damage: 20
       stunDuration: 0
   mc_hitBoxes:
   - {fileID: 5151505418851265185}
@@ -515,6 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 80
+  maxHealth: 0
 --- !u!58 &7485321854522521382
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -544,6 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionTimer: 0.68
+  Fairycontroller: {fileID: 0}
 --- !u!95 &768409431
 Animator:
   serializedVersion: 4

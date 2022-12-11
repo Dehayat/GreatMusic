@@ -12,7 +12,7 @@ public class StartGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             play = true;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }
     }
 }
