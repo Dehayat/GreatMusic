@@ -38,7 +38,7 @@ public class GameData : MonoBehaviour
     private void AddScore(EventData obj)
     {
         ScoreAddEvent eventData = obj as ScoreAddEvent;
-        score += (int)(eventData.baseScore * (int)currentScoreMultiplier);
+        teeth += (int)(eventData.baseScore * (int)currentScoreMultiplier);
     }
 
     private void OnDisable()

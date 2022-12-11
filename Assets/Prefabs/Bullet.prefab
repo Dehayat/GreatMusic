@@ -165,15 +165,14 @@ GameObject:
   m_Component:
   - component: {fileID: 3047385334097927396}
   - component: {fileID: 3047385334097927397}
-  - component: {fileID: 3047385334097927418}
   - component: {fileID: 8871947349370669779}
   - component: {fileID: 276840161804919581}
   - component: {fileID: -8080450206095479758}
   - component: {fileID: 3763982113179971468}
   - component: {fileID: 967836639}
-  - component: {fileID: -4853706158618922135}
-  - component: {fileID: 8707199941769564121}
-  m_Layer: 10
+  - component: {fileID: 7503389774536854763}
+  - component: {fileID: 5090734460224942590}
+  m_Layer: 11
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,32 +248,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3047385334097927418
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3047385334097927416}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &8871947349370669779
 Rigidbody2D:
   serializedVersion: 4
@@ -375,7 +348,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-4853706158618922135
+--- !u!114 &7503389774536854763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -390,7 +363,7 @@ MonoBehaviour:
   dieEvents:
     m_PersistentCalls:
       m_Calls: []
---- !u!58 &8707199941769564121
+--- !u!58 &5090734460224942590
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,6 +376,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012461185, y: 0}
+  m_Offset: {x: 0.14018792, y: 0.006230533}
   serializedVersion: 2
-  m_Radius: 0.45015538
+  m_Radius: 0.26012295
